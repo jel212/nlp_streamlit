@@ -10,9 +10,9 @@ input_text = st.text_area("Enter text for analysis here", height = 100)
 
 def cleanText(text):
     #Keeping only Text and digits
-    text = re.sub(r"[^A-Za-z0-9]", "", text) 
+    text = re.sub(r"[^A-Za-z0-9]", " ", text)
     #Removes Whitespaces
-    text = re.sub(r"\'s", "", text)
+    text = re.sub(r"\'s", " ", text)
     # Removing Links if any
     text = re.sub(r"http\S+", " link ", text)
     # Removes Punctuations and Numbers
