@@ -7,7 +7,6 @@ import re
 
 st.title("NLP Sentiment Analysis")
 input_text = st.text_area("Enter text for analysis here", height = 100) 
-analyze_button = st.button("Analyze")
 
 def cleanText(text):
     #Keeping only Text and digits
@@ -26,7 +25,7 @@ def cleanText(text):
     text = " ".join(lemmatized_words)
     return text
 
-if analyze_button:
+if st.button("Analyze")
     blob = TextBlob(cleanText(input_text)) 
     sentiment_score = blob.sentiment.polarity
     if sentiment_score > 0:
