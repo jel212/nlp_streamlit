@@ -25,7 +25,7 @@ def cleanText(text):
     text = " ".join(lemmatized_words)
     return text
 
-if st.button("Analyze")
+if st.button("Analyze"):
     blob = TextBlob(cleanText(input_text)) 
     sentiment_score = blob.sentiment.polarity
     if sentiment_score > 0:
